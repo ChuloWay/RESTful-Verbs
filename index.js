@@ -52,7 +52,7 @@ app.get('/comments/new', (req, res) => {
 })
 app.post('/comments', (req, res) => {
     const { username, comment } = req.body
-    comments.push({ username, comment })
+    comments.push({ username, comment, id:uuid() })
     res.redirect('/comments');
 
 })
